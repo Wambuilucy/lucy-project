@@ -1,0 +1,63 @@
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<div class="up">
+
+</div>
+<div style="position: relative;" class="pd" >
+  <div class="" style="position: absolute;">
+    <div class="row">
+      <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          <header>
+            <a href="{%url 'index'%}"><img class="logo" src="/static/img/LITTLE.png" alt="logo"></a>
+          </header>
+    </div>
+    </div>
+  </div>
+  <div class="w3-panel ">
+    <div class="juu ">
+    <a href="{%url 'location'%}"><button type="button" id="location" class="btn btn-success" name="button">Find Location</button></a>
+    <a href="https://play.google.com/store/apps" target="_blank"><img class="play" src="http://style.anu.edu.au/_anu/images/icons/icon-android-app.png" alt="" style="position: absolute;"></a>
+    <br>
+    <br>
+    </div>
+</div>
+ <div class="panel-body">
+   <nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="{%url 'index'%}"><li>Home</li></a>
+      <a href="{%url 'program'%}"><li>Programs & Events</li></a>
+      <a href="{%url 'about'%}"><li>About Us</li></a>
+      <a href="{%url 'enroll'%}"><li>Enroll</li></a>
+      <a href="{%url 'annual'%}"><li>Annual Science Fairs</li></a>
+      <a href="{%url 'foundation'%}"><li>East Africa Foundation</li></a>
+      <a href="{%url 'sponsor'%}"><li>STEM Learning</li></a>
+      <a href="{%url 'contact'%}"><li>Contact</li></a>
+    </ul>
+  </div>
+</nav>
+   <ul class="panel-list" id="horizontal">
+   <li class="panael-menu" ><a href="{%url 'program'%}">Programs & Events</a></li>
+   <li class="panael-menu"><a href="{%url 'about'%}">About Us</a></li>
+   <li class="panael-menu" ><a href="{%url 'enroll'%}">Enroll</a></li>
+   <li class="panael-menu"><a href="{%url 'annual'%}">Annual Science Fairs</a></li>
+   <li class="panael-menu"><a href="{%url 'foundation'%}">East Africa Foundation</a></li>
+   <li class="panael-menu" ><a href="{%url 'sponsor'%}">STEM Learning</a></li>
+   <li class="panael-menu"><a href="{%url 'contact'%}">Contact</a></li>
+ </ul>
+</div>
+ <div class="w3-panel ">
+   <br>
+   <br>
+ </div>
+</div>
+
+{%endblock%}
