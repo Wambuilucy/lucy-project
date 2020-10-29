@@ -24,3 +24,6 @@ def contribute(request):
     else:
         form = EnquiryForm()
     return render(request,'contribute.html',{"form":form})
+
+def navbar(request):
+    return render(request, 'navbar.html')

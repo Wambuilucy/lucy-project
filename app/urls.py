@@ -5,7 +5,10 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     url('^$',views.welcome,name = 'welcome'),
-    url('^about/$',views.about,name = 'about'),
+    url('^index/$',views.index,name='index'),
+    url('^about/$',views.about,name = 'about'), 
+    url('^base/$',views.base,name='base'),
+    url('^navbar/$',views.navbar,name='navbar'),
     url('^contribute/$',views.contribute,name = 'contribute'),
 ]
 
