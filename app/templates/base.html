@@ -1,0 +1,55 @@
+{% load bootstrap3 %} {%load staticfiles%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="/static/img/LITTLE.png" type="image/gif" sizes="16x16">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" />
+    <link href='https://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet'>
+    {% bootstrap_css%}
+    <meta charset="utf-8">
+
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+      <title> Little Einsteins  </title>
+    {% endif %}
+
+
+  </head>
+  <body>
+
+    {%block content %}
+    {%endblock%}
+
+
+    {% block scripts %}
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       {% bootstrap_javascript %}
+      {% endblock %}
+  </body>
+</html>
+<style media="screen">
+  a{
+    color: black;
+  }
+  h1{
+    font-family: "Love Ya Like A Sister";
+  }
+  .li, p,h5, h4{
+    font-family:'Lora'
+  }
+  @media screen and (max-width: 650px) {
+    h1,h2{
+      font-size: 20px;
+    }
+    p, li, h5,h3{
+      font-size: 12px;
+    }
+    h4{
+      font-size: 15px;
+    }
+  }
+</style>
