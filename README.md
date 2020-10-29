@@ -1,4 +1,4 @@
-# The  young coders tutorial.
+# The  young coders virtual stem learning(tutorial).
 
 A web application about a childrens learning platform for Django and python.
 
