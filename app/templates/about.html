@@ -1,36 +1,52 @@
-{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-<head>
-  <link rel="stylesheet" href="{% static 'css/about.css' %}">
-</head>
-  {%include 'header.html'%}
-  <div class="about">
-<img class='prog' src="/static/img/IMG_5940.jpg" alt="" width="100%">
-  </div>
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+{{bock.super}}
+
+
+
+<style>
+    .thisy{
+        padding-left: 15%;
+    }
+    hr{
+        background: #000000;
+    }
+    .btner{
+        background-color: #FF008C;
+        border-color: #FF008C;
+    }
+    body{
+        background-image: url(https://images.unsplash.com/photo-1455884981818-54cb785db6fc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f583b6dffc8c50e201f2be28b3badeea&auto=format&fit=crop&w=1380&q=80);
+    }
+    </style>
+    
+  
 <div class="container">
-  <h1>What Young coders Is About And Belives In</h1>
-  <div class="row">
-  <div class="col-md-5">
-    <p>Young coders believes that Code and Science Exploration in young youths begins with Fun and sets the basis for a lifelong interest and knowledge of Code andScience, Technology, Engineering and Mathematics. Through relatable experiences and stories of `KABI’ the Science Kid and `SASHA’ the Stemette.<br>
-   We also offer hands-on activities showcasing environmental and health issues in a different, entertaining and leisurely way.</p>
-  <div class="glance">
-    <h2>At A Glance </h2> <hr>
-    <ul>
-      <li>We work with children between the ages of 10-20.</li> <br>
-      <li>We focus on Project Based Learning.</li> <br>
-      <li>We teach STEM using entertainment and other innovative methodologies for children to retain valuable, educational information.</li> <br>
-      <li>We encourage participation by youths.</li> <br>
-      <li>We promote good health and environmental awareness.</li> <br>
-      <li>We encourage experimentation as a learning tool.</li> <br>
-      <li>We leverage the scientific process as a way to learn and discover.</li> <br>
-      <li>We foster a love of science while developing children’s creativity, problem solving skills and self-esteem.</li> <br>
-    </ul>
-  </div>
-  <img class='do' src="/static/img/KABI.png" alt="" height='60%' width="60%">
-</div>
-  <div class="col-md-7">
-    <img class='graph' src="/static/img/Infographic.jpg" alt="">
-  </div>
-  </div>
-</div>
-{%include 'footer.html'%}
-  {%endblock %}
+    
+    <div class="well well-lg">
+        <h4>short intro</h4>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+         Similique repellendus beatae optio sint enim eveniet totam quos molestiae, 
+         harum alias veniam facere suscipit exercitationem architecto quisquam, nostrum,
+          hic quod dolores.
+    </div>
+
+    <div class="jumbotron">
+            <h1>Longer description</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ex eius iusto accusamus ratione autem magnam nihil consectetur veniam vel 
+                 delectus qui incidunt earum nisi dolore explicabo perspiciatis reprehenderit, 
+                 temporibus modi.</p>
+            
+          </div>
+                 
+
+</div>  <!--container  -->
+      
+ 
+        
+
+
+
+{% endblock %}

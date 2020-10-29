@@ -1,47 +1,57 @@
-{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-<head>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" />
-  <link href='https://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
-  {%include 'header.html'%}
-  {%include 'carousel.html'%}
-  <p></p>
-  <div class="banner">
-    <img src="/static/img/little-banner.jpg" alt="" width="100%">
-    <button type="button" class="btn" id='but'><a href="{%url 'program'%}">Our Programs & Events</a></button>
-  </div>
-  <br>
- <div class="container">
-   <div class="row">
-     <div class="col-md-4">
-       <h1 id='about'>What we are about</h1>
-       <p class='about' >Code,Science, Technology, Engineering and Math learning for kids/teens in a fun and real-life application way.<strong>Science is Fun!</strong><br>
-       young coders East Africa seeks to inspire and teach students about the world of Code,science, technology, engineering and math through entertaining hands-on activities.
-        Our aim is to guide a new generation of young science and code explorers through genuine passion in learning how the world works. </p>
-        <p></p>
-       <img src="/static/img/Chemistry.gif" alt="" class="labs" height="150px;">
-      </div>
-      <div class="vl">
-      <div class="col-md-1">
-       <div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br>
-       <div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br>
-       <div class="vl"></div><br><div class="vl"></div><br>
-       </div>
-       </div>
-     <div class="col-md-7">
-      <img class='do' src="/static/img/IMG_6347.jpg" alt="" height='60%' width="85%">
-     </div>
-   </div>
-      <br>
-    </div>
-  {%include 'gallery.html'%}
-  <p></p>
-      {%include 'footer.html'%}
-  </body>
-  {%endblock%}
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+{{bock.super}}
+
+
+
+<style>
+    .thisy{
+        padding-left: 15%;
+    }
+    hr{
+        background: #000000;
+    }
+    .btner{
+        background-color: #FF008C;
+        border-color: #FF008C;
+    }
+    hr{
+        color: #000000;
+        font-weight: bolder;
+        size: 30;
+    }
+    .uni{
+        height: 400px ;
+        width: 400px ;
+    }
+    </style>
+    
+  
+  <div class="container">
+{% for book in books %}
+<div>
+    
+        <div class="row">
+                <div class="col-md-6">
+                        <img src="{{book.ifuku_image.url}}" alt="Image" srcset="" class="img-responsive img-thumbnail uni">
+                </div>
+                <div class="col-md-6">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos exercitationem, corrupti eum facere ullam fugit, deserunt aliquid minima sed sint atque necessitatibus cupiditate commodi, distinctio neque obcaecati repudiandae tempora reprehenderit?</h3>
+                    <a href="{{book.ifuku.url}}"><h4>Click here to read the book</h4></a>
+                </div>
+        </div>
+        
+      
+        <hr>
+</div>
+    
+{% endfor %}
+</div>  <!--container  -->
+      
+          
+        
+
+
+
+{% endblock %}
