@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'app',
+    'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Wambui',
-        'USER': '<access-moringa>',
-    'PASSWORD':'<Access>',
+        'USER': 'access-moringa',
+    'PASSWORD':'Access',
     }
 }
 
