@@ -1,39 +1,6 @@
-{%extends 'base.html'%}
-{% load bootstrap4 %}
-{% block content %}
-{{bock.super}}
-
-
-
-<style>
-    .thisy{
-        padding-left: 15%;
-    }
-    hr{
-        background: #000000;
-    }
-    .btner{
-        background-color: #FF008C;
-        border-color: #FF008C;
-    }
-    body{
-        background-image: url(https://images.unsplash.com/photo-1455884981818-54cb785db6fc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f583b6dffc8c50e201f2be28b3badeea&auto=format&fit=crop&w=1380&q=80);
-    }
-    </style>
-    
-  
-<div class="container">
-      <form  action="{% url 'contribute' %}" method="post" enctype="multipart/form-data" class="form-group">
-        {%csrf_token%}
-    
-        {% bootstrap_form form%}
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-</div>  <!--container  -->
-      
-          
-        
-
-
-
-{% endblock %}
+<h2>Contact me</h2>
+<form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <textarea name="message" placeholder="Message"></textarea>
+    <input type="submit" value="Submit" />
+</form>

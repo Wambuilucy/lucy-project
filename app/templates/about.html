@@ -1,52 +1,56 @@
-{%extends 'base.html'%}
-{% load bootstrap4 %}
-{% block content %}
-{{bock.super}}
-
-
-
-<style>
-    .thisy{
-        padding-left: 15%;
-    }
-    hr{
-        background: #000000;
-    }
-    .btner{
-        background-color: #FF008C;
-        border-color: #FF008C;
-    }
-    body{
-        background-image: url(https://images.unsplash.com/photo-1455884981818-54cb785db6fc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f583b6dffc8c50e201f2be28b3badeea&auto=format&fit=crop&w=1380&q=80);
-    }
-    </style>
-    
-  
-<div class="container">
-    
-    <div class="well well-lg">
-        <h4>short intro</h4>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-         Similique repellendus beatae optio sint enim eveniet totam quos molestiae, 
-         harum alias veniam facere suscipit exercitationem architecto quisquam, nostrum,
-          hic quod dolores.
-    </div>
-
-    <div class="jumbotron">
-            <h1>Longer description</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Ex eius iusto accusamus ratione autem magnam nihil consectetur veniam vel 
-                 delectus qui incidunt earum nisi dolore explicabo perspiciatis reprehenderit, 
-                 temporibus modi.</p>
-            
-          </div>
-                 
-
-</div>  <!--container  -->
-      
  
-        
+{% load bootstrap4 %}
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
 
 
+  <title>Young coders.</title>
 
-{% endblock %}
+  {% block styles %}
+  {% bootstrap_css %}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/baseport.css' %}">
+  <link href="{% static 'css/hover-min.css' %}" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="{% static 'css/Animate.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  {% endblock %}
+
+</head>
+
+<body>
+
+  {% block content %}
+
+  {%endblock%}
+
+  {% block scripts %}
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="static/js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166876660-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-166876660-1');
+  </script>
+
+  {% bootstrap_javascript %}
+  {% endblock %}
+</body>
+
+</html>

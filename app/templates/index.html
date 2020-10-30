@@ -1,57 +1,329 @@
-{%extends 'base.html'%}
-{% load bootstrap4 %}
+{%include 'base.html'%}
 {% block content %}
-{{bock.super}}
+
+<div class="container-fluid">
+  <!-- <div class="row"> -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand">Young coders</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+      aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#strengths">introduction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#recent-work">code</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">more sources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <!-- <h1 class="text-center title11">The young coders tutorial. </h1>
+
+  <p class="title111 text-center wow bounceInUp">Software Development for the young.</p>
+  <div class="container" >
+    <a href="#strengths"><img src="static/image/django.png" alt="" class="img-fluid"
+    ></a>
+  </div>
 
 
-
-<style>
-    .thisy{
-        padding-left: 15%;
-    }
-    hr{
-        background: #000000;
-    }
-    .btner{
-        background-color: #FF008C;
-        border-color: #FF008C;
-    }
-    hr{
-        color: #000000;
-        font-weight: bolder;
-        size: 30;
-    }
-    .uni{
-        height: 400px ;
-        width: 400px ;
-    }
-    </style>
-    
-  
-  <div class="container">
-{% for book in books %}
-<div>
-    
-        <div class="row">
-                <div class="col-md-6">
-                        <img src="{{book.ifuku_image.url}}" alt="Image" srcset="" class="img-responsive img-thumbnail uni">
-                </div>
-                <div class="col-md-6">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos exercitationem, corrupti eum facere ullam fugit, deserunt aliquid minima sed sint atque necessitatibus cupiditate commodi, distinctio neque obcaecati repudiandae tempora reprehenderit?</h3>
-                    <a href="{{book.ifuku.url}}"><h4>Click here to read the book</h4></a>
-                </div>
-        </div>
-        
-      
-        <hr>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+    integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 </div>
-    
-{% endfor %}
-</div>  <!--container  -->
-      
-          
-        
+============================ strengths section========================== -->
+
+<div class="jumbotron">
+  <h2 class="display-4">The Young Coders Tutorial</h2>
+  <p class="lead">Software Development for the young</p>
+  <hr class="my-4">
+  <p>Read writing about Software Development in Young Coder. Hack. Code. Think. Stories about science, tech, and programming.</p>
+</div>
+
+<div class="container-fluid text-center bg-img1" id="strengths">
+  <Strong>
+    <h1 class="text-center heading " style="font-weight: 30px;text-decoration: underline;">Basics Of Programming</h1>
+  </Strong>
+  <div class="row">
+
+    <div class="col-md-1 col-sm-12 col-xs-12 " id="wrapper"></div>
+    <div class="col-md-10 col-sm-12 col-xs-12 " id="wrapper">
+      <div class="card card-image" style="background-image: url('/static/image/django.png');background-repeat: no-repeat
+;background-size: cover;background-position: center;">
+  <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+    <div class="py-5">
+
+      <!-- Content -->
+      <h5 class="h5 orange-text"><i class="fas fa-code"></i> Django</h5>
+      <h2 class="card-title h2 my-4 py-2">Tutorials On The Basics Of Django</h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">Learn how to program in less than 3 months and create mobile and web apps</p>
+      <a href="{% url 'startDjango' %}" class="btn peach-gradient"><i class="fas fa-graduation-cap"></i> Start Learning</a>
+
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-1 col-sm-12 col-xs-12 " id="wrapper">
+
+  </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+
+    <div class="col-md-1 col-sm-12 col-xs-12 " id="wrapper"></div>
+    <div class="col-md-10 col-sm-12 col-xs-12 " id="wrapper">
+      <div class="card card-image" style="background-image: url('/static/image/flask.jpg');background-repeat: no-repeat
+;background-size: cover;background-position: center;">
+  <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+    <div class="py-5">
+
+      <!-- Content -->
+      <h5 class="h5 orange-text"><i class="fas fa-code"></i> Flask</h5>
+      <h2 class="card-title h2 my-4 py-2">Tutorials On The Basics Of Flask</h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">Build interactive web app from scratch with python's microframework...>
+      <a class="btn peach-gradient"><i class="fas fa-graduation-cap"></i> Start Learning</a>
+
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-1 col-sm-12 col-xs-12 " id="wrapper">
+
+  </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+
+    <div class="col-md-1 col-sm-12 col-xs-12 " id="wrapper"></div>
+    <div class="col-md-10 col-sm-12 col-xs-12 " id="wrapper">
+      <div class="card card-image" style="background-image: url('/static/image/django-views-1.jpg');background-repeat: no-repeat
+;background-size: cover;background-position: center;">
+  <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+    <div class="py-5">
+
+      <!-- Content -->
+      <h5 class="h5 orange-text"><i class="fas fa-code"></i> Advanced Django</h5>
+      <h2 class="card-title h2 my-4 py-2">Get django advanced tutorials</h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">Dive deep into django advanced lessons with creating REST API's and consuming them</p>
+      <a class="btn peach-gradient"><i class="fas fa-clone left"></i> Start Learning</a>
+
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-1 col-sm-12 col-xs-12 " id="wrapper">
+
+  </div>
+  </div>
+</div>
+
+<!--    
+    <div class="container text-center">
+      <a href="#recent-work"><img src="static/images/down-button.png" alt="" class="centered1 hvr-grow"
+         ></a>
+    </div>
+
+</div>
+<!--============================ recent work section========================== -->
+
+<!-- <div class="container-fluid  solid1" id="recent-work">
+  <h1 class="text-center heading wow fadeIn">books</h1>
+
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 10px;">
+      <div class="hovereffect">
+        <img class="" src="static/images/taste.png" style="width:100%;" alt="">
+        <div class="overlay">
+          <h2>learndjango first</h2>
+          <a class="info" href="#">coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 15px;">
+      <div class="hovereffect">
+        <img class="" src="static/images/mobile.jpg" style="width:100%;" alt="">
+        <div class="overlay">
+          <h2>lms django</h2>
+          <a class="info"
+            href="https://www.figma.com/proto/62f7LGbYMMdXAIY5749Er1/product-page?node-id=1%3A2&scaling=scale-down">explore</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 10px" ;>
+      <div class="hovereffect">
+        <img class="" src="static/images/avecesare.png" style="width:100%;" alt="">
+        <div class="overlay">
+          <h2>python-django for beginers.</h2>
+          <a class="info" href="https://tyra-hans.github.io/Ave-Cesare/">explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 10px;">
+      <div class="hovereffect">
+        <img class="" src="static/images/safeside.png" style="width:100%;" alt="">
+        <div class="overlay">
+          <h2>django book</h2>
+          <a class="info" href="#">explore</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 
+<div class="container">
+  <a href="#experience"><img src="static/images/down-button.png" alt="" class="centered1 hvr-grow"></a>
+</div>
+
+<!--============================ experience section========================== -->
+
+<!-- <div class="container-fluid" id="experience">
+  <h1 class="text-center heading wow fadeIn" data-wow-delay="0.3s">activities</h1>
+  <div class="row ">
+
+    <div class="timeline">
+
+      <ul>
+
+        <li>
+
+          <div class="content">
+
+            <h3>Software Developer at Imprint Africa</h3>
+
+            <p>Imprint Africa is a tech firm keen on availing technology to SMEs whose lack of access
+              keeps them from participating in global trade and scaling to their fullest potential. <br>Technology -
+              Wordpress, Figma, Angular, HTML, Sass, CSS, Flutter, Shopify</p>
+
+
+          </div>
+
+          <div class="point"></div>
+
+          <div class="date">
+
+            <h4>March 2020 to date</h4>
+
+          </div>
+
+        </li>
+
+        <li>
+
+          <div class="content">
+
+            <h3>schools</h3>
+
+            <p>Moringa School is an intensive tech education program based out of Nairobi, Kenya offering courses in
+              software
+              development and data science. <br> Technology - Django,Flask,Angular,Bootstrap, Git, Heroku, PostgreSQL
+              <br>
+              Practices - Agile development tactics, test-driven development, mobile-first methodology
+
+            </p>
+
+          </div>
+
+          <div class="point"></div>
+
+          <div class="date">
+
+            <h4>July 2019 to January 2020</h4>
+
+          </div>
+
+        </li>
+
+        <li>
+
+          <div class="content">
+
+            <h3>learn all languages</h3>
+
+            <p>python django,flask angular and many other more.</p>
+
+          </div>
+
+          <div class="point"></div>
+
+          <div class="date">
+
+            <h4>September 2020 </h4>
+
+          </div>
+
+        </li>
+
+
+      </ul>
+
+    </div>
+
+  </div>-->
+<!-- </div> 
+
+
+
+
+
+
+
+
+
+
+ <div class="container" id="contact">
+  <h1 class="text-center heading wow fadeIn" style="padding: 50px;" data-wow-delay="0.3s">Contact us</h1>
+  <div class="row text-center">
+    <div class="col-md-12 " style="padding-bottom: 30px;">
+
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=tyrahans17@gmail.com&su=Contact+from+portfolio&body=Insert+message+here"><img
+          src="static/images/gmail.png" alt="" style="width: 50px;" class="hvr-grow wow fadeInRight"
+          data-wow-delay="1s"></a>
+      <a href="https://github.com/Tyra-hans"><img src="static/images/github-logo.png" alt="" style="width:50px;"
+          class="hvr-grow wow fadeInLeft" data-wow-delay="1s"></a>
+      <a href="https://www.linkedin.com/in/tyra-hans/"><img src="static/images/linkedin1.png" alt="" style="width:50px;"
+          class="hvr-grow wow fadeInLeft" data-wow-delay="1s"></a>
+
+<!-- 
+    </div> -->
+
+
+
+  </div>
+</div>
+<div class="container">
+
+  <div class="row text-center">
+    <div class="col-md-12 " style="padding-bottom: 30px;">
+      <a href="#top"><img class="hvr-grow" src="static/images/upload.png" alt="" style="float: right;"></a>
+
+    </div>
+
+
+
+  </div>   -->
+</div>
 {% endblock %}

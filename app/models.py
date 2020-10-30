@@ -1,14 +1,22 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+from django.contrib.auth.models import User
 
-# Create your models here.
-class Enquiry(models.Model):
-    email = models.EmailField(max_length=70,blank=True)
-    message = models.CharField(max_length=180, null=True)
+class Image(models.Model):
+    title = models.CharField(max_length=180)
+    description = models.TextField(max_length=1180)
+    image = CloudinaryField('image')
+    content  = models.TextField(max_length=1180)
+    author = models.CharField(max_length=180)
+    Published = models.BooleanField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
 
-class Vitabu(models.Model):
-    # file will be uploaded to MEDIA_ROOT/uploads
-    ifuku = models.FileField(upload_to='uploads/')
-    ifuku_image = models.ImageField(upload_to = 'uploads/', blank=True)
-    
+
+
+
     

@@ -1,29 +1,54 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse,Http404,HttpResponseRedirect
+from django.http import HttpResponse,Http404,HttpResponseRedirect, JsonResponse
 from django.contrib.auth.decorators import login_required
-from .models import Enquiry,Vitabu
-from .forms import EnquiryForm
+from .serializers import ImageSerializer
+from rest_framework.parsers import JSONParser
+from django.views.decorators.csrf import csrf_exempt
+from .models import *
+from .forms import *
 
-# Create your views here.
-def welcome(request):
-    books = Vitabu.objects.all()
+@csrf_exempt
+def tutorials_list(request):
+    """
+    List all code snippets, or create a new snippet.
+    """
+    if request.method == 'GET':
+        images = Image.objects.all()
+        serializer = ImageSerializer(images, many=True)
+        return JsonResponse(serializer.data, safe=False)
 
-    return render(request,'index.html',{"books":books})
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = ImageSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
+    
+@csrf_exempt
+def image_detail(request, pk):
+    """
+    Retrieve, update or delete a code snippet.
+    """
+    try:
+        images = Image.objects.get(pk=pk)
+    except Image.DoesNotExist:
+        return HttpResponse(status=404)
 
-def about(request):
+    if request.method == 'GET':
+        serializer = ImageSerializer(images)
+        return JsonResponse(serializer.data)
 
-    return render(request,'about.html')
+    elif request.method == 'PUT':
+        data = JSONParser().parse(request)
+        serializer = ImageSerializer(images, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        return JsonResponse(serializer.errors, status=400)
 
-def contribute(request):
-    form = EnquiryForm(request.POST,request.FILES)
-    if request.method == 'POST': 
-        if form.is_valid():
-            enquiry = form.save()
-            enquiry.save()
-            print("Message succesfully sent!")
-    else:
-        form = EnquiryForm()
-    return render(request,'contribute.html',{"form":form})
+    elif request.method == 'DELETE':
+        images.delete()
+        return HttpResponse(status=204)
 
-def navbar(request):
-    return render(request, 'navbar.html')
+

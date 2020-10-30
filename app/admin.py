@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Enquiry,Vitabu
+from .models import *
 # Register your models here.
-admin.site.register(Enquiry)
-admin.site.register(Vitabu)
+admin.site.register(Image)

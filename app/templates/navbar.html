@@ -1,92 +1,58 @@
-{% load bootstrap4 %}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Young coders.</title>
-     
-{% block styles %}
-{% bootstrap_css %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-  {% endblock %}
-
-  <style>
-      .navbar{
-          padding-top: 2%;
-          background-color: #ffffff;
-          border: #ffffff;
-      }
-    .navbar-brand{
-       color:  #FF008C;
-      }
-    .btny{
-        color: #FF008C;
-    }
-    .container{
-        padding-bottom: 5%;
-    }
-   
-    .hdy{
-        color: #000000;
-        font-weight: bolder;
-    }
-    
-    .navbar-default .navbar-brand {
-    color: #000000;
-    font-size: 45px;
-    font-weight: bolder;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: #000000;
-    font-size: 30px;
-}
-
-.navbar{
-    
-    background: url(https://images.unsplash.com/photo-1517831185053-0f484a55ac5f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f50bbaa48ae43b7a84ea466e920e632a&auto=format&fit=crop&w=500&q=60);
-}
-    
-  </style>
-
-
-</head>
-<body>
-    
-<div class="container">
-
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand hdy" href="{% url 'welcome' %}">Young coders.</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              
-             
-            </ul>
-            
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="{% url 'about' %}" class="hdy">About</a></li>
-              <li><a href="{% url 'contribute' %}" class="hdy">Be a Contributor</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-            </div>
-            <hr>
-</body>
-</html>
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+          aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
